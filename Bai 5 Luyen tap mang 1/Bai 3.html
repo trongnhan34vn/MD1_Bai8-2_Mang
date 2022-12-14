@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="numbers" placeholder="Nhập vào nhiều số" type="text">
+<button onclick="getNumbers()">Submit</button>
+<p>Giá trị max là: <span id="result"></span></p>
+<p>Trung bình là: <span id="avg"></span></p>
+<script>
+<!--    Input: get numbers từ input-->
+let arr = []
+function getNumbers() {
+    let inputNumbers = document.getElementById('numbers').value;
+    arr = inputNumbers.split(',');
+    arr = arr.map(parseFloat);
+    console.log(arr);
+    checkMax();
+    avg();
+}
+// Hiện giá trị lớn nhất của mảng
+function checkMax() {
+    let max = arr[0];
+    for(i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    // Hiển thị Output giá trị lớn nhất
+    document.getElementById('result').innerHTML = max
+}
+
+// Hàm tính trung bình mảng
+function avg()  {
+    let sum = 0;
+    for(i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    let avg = sum / arr.length;
+    document.getElementById('avg').innerHTML = avg;
+}
+
+</script>
+</body>
+</html>

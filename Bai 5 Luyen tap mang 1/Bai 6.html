@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Kiểm tra có trong mảng hay ko? Hãy nhập một số</p>
+<input id="eVInput" type="text">
+<button onclick="getInputCompare()">Submit</button>
+<p id="result"></p>
+<script>
+<!--  input mảng số nguyên 10 phần tử-->
+let primeNumber = [];
+function getPrime(min,max) {
+  min = -100;
+  max = 100;
+  for(i = 0; i < 10; i++) {
+    primeNumber.push(Math.floor(Math.random() * (max - min) + min))
+  }
+  console.log(primeNumber)
+}
+getPrime()
+
+// Nhập và tạo phần tử V từ input & So sánh
+
+function getInputCompare() {
+  var eV = + document.getElementById('eVInput').value;
+  console.log(eV);
+  for(i = 0; i < primeNumber.length; i++) {
+    if(primeNumber[i] == eV) {
+        console.log(primeNumber[i] == eV);
+        document.getElementById('result').innerHTML = '<h1 style="color: blue">' + 'V is in the array' + '</h1>';
+        break;
+    } else {
+        console.log(primeNumber[i] == eV);
+        document.getElementById('result').innerHTML = '<h1 style="color: red">' + 'V is not in the array' + '</h1>';
+    }
+  }
+}
+
+</script>
+</body>
+</html>

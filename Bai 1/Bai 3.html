@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--  Input: Nhập vào chuỗi, kí tự thường-->
+let str = 'The Quick Brown Fox';
+let text = '';
+let result = '';
+
+for(i = 0; i < str.length; i++) {
+  text = str[i];
+  if(text === text.toUpperCase()) {
+    text = text.toLowerCase();
+  } else {
+    text = text.toUpperCase();
+  }
+  result += text;
+}
+
+console.log(result)
+
+// Output: chuyển thành chữ hoa, trừ kí tự đầu
+</script>
+</body>
+</html>

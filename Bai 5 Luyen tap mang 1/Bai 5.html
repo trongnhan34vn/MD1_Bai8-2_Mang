@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  <!--Input: một tập hợp số nguyên lưu vào mảng-->
+  let arr = [];
+  function getNumbers(min, max) {
+    min = -100;
+    max = 100;
+    for(i = 0; i < 10; i++) {
+      arr.push(Math.floor(Math.random() * (max - min) + min));
+    }
+    console.log(arr)
+  }
+  getNumbers()
+//   Kiểm tra số âm
+  function numbersNegative() {
+    let result = [];
+    for (i = 0; i < arr.length; i++) {
+      if(arr[i] < 0) {
+        result.push(arr[i]);
+      }
+    }
+    console.log(result);
+    console.log(result.length)
+  }
+numbersNegative()
+</script>
+
+</body>
+</html>

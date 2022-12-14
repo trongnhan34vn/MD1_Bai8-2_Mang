@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str = 'Hôm-nay-là-thứ-hai';
+  console.log(str.split('-'))
+  let newStr = str.split('-');
+  console.log(newStr);
+  let result;
+    let newResult = [];
+  for(i = 0; i < (newStr.length); i++) {
+      result = newStr[i] + '_';
+      console.log(result);
+      newResult.push(result);
+  }
+  console.log(newResult.join("").slice(0,-1));
+</script>
+</body>
+</html>

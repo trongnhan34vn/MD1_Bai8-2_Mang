@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+<!-- Input:    Nhập số-->
+ let num = prompt('enter the number');
+ // Chuyển sang chuỗi
+ let str = num.toString();
+ // lưu biến kết quả vào 1 mảng
+ let result = [str[0]];
+ // chỉ số trong chuỗi
+// Kiểm tra x và x - 1 chia hết cho 2
+
+// Process: Sử dụng for để kiểm tra qua các phần tử của chuỗi
+for(let x = 1; x < str.length; x++) {
+    let checkDivideBy2 = str[x] % 2 == 0 & str[x-1] % 2 == 0;
+        if(checkDivideBy2) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x]);
+        }
+}
+// Output:
+console.log(typeof result.join(''))
+document.write(result.join(''))
+</script>
+</body>
+</html>

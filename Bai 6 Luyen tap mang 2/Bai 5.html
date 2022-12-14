@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>So sánh chuỗi</p>
+<p>Nhập chuỗi 1</p>
+<input id="str1" type="text">
+<p>Nhập chuỗi 2</p>
+<input id="str2" type="text">
+<button onclick="onClick()">Submit</button>
+<h1 id="result"></h1>
+</body>
+<script>
+<!--    Input: Nhập vào 2 chuỗi-->
+function inputStr() {
+    let inputStr1 = document.getElementById('str1').value;
+    let inputStr2 = document.getElementById('str2').value;
+    console.log(inputStr2, inputStr1)
+    if (inputStr1 == inputStr2) {
+        document.getElementById('result').innerHTML = 'Hai chuỗi giống nhau';
+    } else {
+        document.getElementById('result').innerHTML =  'Hai chuỗi khác nhau';
+    }
+}
+
+function onClick() {
+    inputStr()
+}
+</script>
+</html>

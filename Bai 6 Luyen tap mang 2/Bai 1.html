@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    Nhập vào mảng a 2 chiều-->
+    let arr = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+// In ra các mảng con theo từng dòng
+function getResult() {
+    for(i = 0 ; i < arr.length; i++) {
+        console.log(arr[i]);
+        document.write("row " + [i],"<br>")
+        for(j = 0; j < arr[i].length; j++) {
+            console.log(arr[i][j]);
+            document.write(arr[i][j],"<br>")
+        }
+    }
+}
+getResult()
+</script>
+</body>
+</html>

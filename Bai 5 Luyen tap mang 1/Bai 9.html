@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color: red">*Nhập các số cách nhau bởi dấu phẩy(,)</p>
+<p>Nhập dãy số mảng a</p>
+<input id="arrA" type="text">
+<p>Nhập dãy số mảng b</p>
+<input id="arrB" type="text">
+<button onclick="onClick()">Submit</button>
+<p>Ghép mảng a và b: <span id="result"></span></p>
+<script>
+<!--    Nhập vào mảng a-->
+let arrA = []
+function getElementA() {
+    let getInputA = document.getElementById('arrA').value;
+    arrA = getInputA.split(',');
+    arrA = arrA.map(parseFloat);
+}
+// Nhập vào mảng b
+let arrB = []
+function getElementB() {
+    let getInputB = document.getElementById('arrB').value;
+    arrB = getInputB.split(',');
+    arrB = arrB.map(parseFloat);
+}
+// Hàm nhận sự kiện onclick và xử lí điều kiện
+function onClick() {
+    getElementA();
+    getElementB()
+    let arrC = arrA.concat(arrB)
+    document.getElementById('result').innerHTML = arrC;
+}
+
+
+</script>
+</body>
+</html>

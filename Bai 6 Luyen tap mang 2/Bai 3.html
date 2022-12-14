@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    Nhập vào mảng-->
+    let arr = ['c','d','r',20,6,7,8,'o','p',8,9];
+    let arrLength = arr.length;
+    let result = []
+   // sử dụng vòng lặp từng phần tử của mảng, phần tử nào là số thì đẩy vào mảng và in ra mảng kết quả
+   for (i = 0; i < arrLength; i++){
+       let check = typeof (arr[i]) == typeof (1);
+       if(check) {
+           result.push(arr[i]);
+       }
+   }
+console.log(result);
+console.log(result.length);
+
+</script>
+</body>
+</html>

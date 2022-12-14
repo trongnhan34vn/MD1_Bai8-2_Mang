@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputNum" type="text">
+<button onclick="getNumber()">Submit</button>
+<h1 id="result"></h1>
+<script>
+<!--    Input: mảng số nguyên gồm 10 phần tử-->
+  let arr = [3,4,5,45,6,7,9,43,10,22];
+console.log(arr)
+// nhập vào số nguyên V từ ô input, và kiểm tra V có xuất hiện trong mảng không
+function getNumber() {
+    let numV = + document.getElementById('inputNum').value;
+    console.log(numV);
+    for(let i = 0; i < arr.length; i++) {
+        console.log(arr[i],numV)
+        if (arr[i] == numV) {
+            document.getElementById('result').innerHTML = 'V có trong mảng';
+            arr.splice(i,1);
+            console.log(arr)
+            break;
+        } else {
+            document.getElementById('result').innerHTML = 'V không có trong mảng';
+        }
+    }
+}
+
+
+
+</script>
+</body>
+</html>
